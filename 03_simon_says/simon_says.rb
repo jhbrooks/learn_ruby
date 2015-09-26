@@ -13,3 +13,7 @@ def repeat (s, n_times=2)
 		return s + ' ' + repeat(s, n_times - 1)
 	end
 end
+
+def start_of_word (s, letters)
+	s[0..(letters-1)]
+end
