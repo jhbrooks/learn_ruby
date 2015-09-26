@@ -16,7 +16,7 @@ def translate_word (s, cons_buff='', is_cap='false')
 
 	if has_nums == true
 		return s
-	elsif (vowels.include?(s[0]) || u_vowels.include?(s[0])) && !((s[0] == "u" || s[0] == "U") && (cons_buff != '' && (cons_buff[-1,1] == 'q' || cons_buff[-1,1] == 'Q')))
+	elsif (s[0] == "'" || (vowels.include?(s[0]) || u_vowels.include?(s[0])) && !((s[0] == "u" || s[0] == "U") && (cons_buff != '' && (cons_buff[-1,1] == 'q' || cons_buff[-1,1] == 'Q'))))
 		if is_cap == true
 			return s[0].upcase + s[1...(s.length)] + cons_buff + "ay"
 		else
@@ -34,7 +34,7 @@ def translate_word (s, cons_buff='', is_cap='false')
 end
 
 def translate (s)
-	words = s.split(/(\W+)/)
+	words = s.split(/([^\w']+)/)
 	pig_words = []
 	words.each { |w| pig_words << translate_word(w) }
 	pig_string = pig_words.join('')
