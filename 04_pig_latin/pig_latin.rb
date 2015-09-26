@@ -8,7 +8,7 @@ def translate_word (s)
 	elsif (consonants.include?(s[0]) || u_consonants.include?(s[0]))
 		return s[1...(s.length)] + s[0] + "ay"
 	else
-		return s
+		return s + "ay"
 	end
 end
 
