@@ -93,6 +93,12 @@ describe "power" do
   it "raises one number to the power of another number" do
     expect(power(4,3)).to eq(64)
   end
+  it "computes the square root of 4" do
+    expect(power(4,(0.5))).to eq(2)
+  end
+  it "computes the square root of 5" do
+    expect(power(5,(0.5))).to be_within(0.001).of(2.2360679775)
+  end
 end
 
 # http://en.wikipedia.org/wiki/Factorial
