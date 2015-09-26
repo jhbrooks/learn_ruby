@@ -17,3 +17,8 @@ end
 def start_of_word (s, letters)
 	s[0..(letters-1)]
 end
+
+def first_word (s)
+	word_array = s.split(/ +/)
+	word_array[0]
+end
