@@ -21,3 +21,7 @@ def multiply (n1, n2, *more_nums)
 	end
 	product
 end
+
+def power (num, exp)
+	num ** exp
+end
