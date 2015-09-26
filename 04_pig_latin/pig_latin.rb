@@ -1,0 +1,3 @@
+def translate (s)
+
+end
