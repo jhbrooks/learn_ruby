@@ -89,8 +89,8 @@ describe "#translate" do
     expect(s).to eq("At'swhay a'say ealday ithway ethay 'sbay?")
   end
 
-  it "leaves words containing nothing but consonants alone, mostly (capitalization may change)" do
-    s = translate("nnngh x?")
-    expect(s).to eq("nnngh x?")
+  it "leaves words containing nothing but consonants alone" do
+    s = translate("Nnngh X?")
+    expect(s).to eq("Nnngh X?")
   end
 end
