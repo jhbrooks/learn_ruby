@@ -24,8 +24,12 @@ def first_word (s)
 end
 
 def titleize (s)
+	is_first = true
 	title_array = s.split(' ').each do |word|
-		word.capitalize!
+		unless (["a","an","the","in","on","to","of","or","and","by","for","but","over","under"].include?(word) && (is_first == false))
+			word.capitalize!
+		end
+		is_first = false
 	end
 	title = title_array.join(' ')
 end
