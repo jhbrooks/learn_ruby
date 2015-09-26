@@ -83,4 +83,9 @@ describe "#translate" do
     s = translate("The h8ters from 1890, also 1990.")
     expect(s).to eq("Ethay h8ters omfray 1890, alsoay 1990.")
   end
+
+  it "translates words containing apostrophes" do
+    s = translate("What's a's deal with the B's?")
+    expect(s).to eq("At'swhay a'say ealday ithway ethay 'sbay?")
+  end
 end
