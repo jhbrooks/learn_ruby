@@ -13,3 +13,11 @@ def sum (n_array)
 	end
 	total
 end
+
+def multiply (n1, n2, *more_nums)
+	product = n1 * n2
+	more_nums.each do |n|
+		product *= n
+	end
+	product
+end
