@@ -18,7 +18,6 @@ describe "Timer" do
     @timer.seconds.should == 0
   end
 
-=begin
   describe 'time_string' do
     it "should display 0 seconds as 00:00:00" do
       @timer.seconds = 0
@@ -40,7 +39,7 @@ describe "Timer" do
       @timer.time_string.should == "01:06:40"
     end
   end
-=end
+
 =begin
     One way to implement the Timer is with a helper method.
     Uncomment these specs if you want to test-drive that
