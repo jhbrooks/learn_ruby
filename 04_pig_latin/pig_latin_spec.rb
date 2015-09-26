@@ -79,4 +79,8 @@ describe "#translate" do
     expect(s).to eq("Atwhay appenedhay otay Eorgegay ethay Ucebray?")
   end
 
+  it "leaves words containing numbers alone" do
+    s = translate("The h8ters from 1890, also 1990.")
+    expect(s).to eq("Ethay h8ters omfray 1890, alsoay 1990.")
+  end
 end
