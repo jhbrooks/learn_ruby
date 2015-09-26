@@ -1,5 +1,7 @@
 def translate_word (s, cons_buff='', is_cap='false')
-	if s == ""
+	if s == "" && cons_buff.length > 0 && is_cap == true
+		return cons_buff[0].upcase + cons_buff[1...cons_buff.length]
+	elsif s == ""
 		return cons_buff
 	end
 
