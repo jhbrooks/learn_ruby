@@ -90,7 +90,7 @@ describe "#translate" do
   end
 
   it "leaves words containing nothing but consonants alone, mostly (capitalization may change)" do
-    s = translate("nnnngh x?")
+    s = translate("nnngh x?")
     expect(s).to eq("nnngh x?")
   end
 end

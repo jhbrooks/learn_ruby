@@ -1,4 +1,8 @@
 def translate_word (s, cons_buff='', is_cap='false')
+	if s == ""
+		return cons_buff
+	end
+
 	if (cons_buff == '') && (s == s.capitalize)
 		is_cap = true
 	end
