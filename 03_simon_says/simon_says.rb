@@ -22,3 +22,10 @@ def first_word (s)
 	word_array = s.split(/ +/)
 	word_array[0]
 end
+
+def titleize (s)
+	title_array = s.split(' ').each do |word|
+		word.capitalize!
+	end
+	title = title_array.join(' ')
+end
